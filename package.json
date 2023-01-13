@@ -2,7 +2,7 @@
   "name": "scrapper",
   "version": "1.0.0",
   "description": "Application for collecting sensor values from IOT based devices and process it on the real time",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
