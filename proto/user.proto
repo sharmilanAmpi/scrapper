@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package auth; // this might be change to user
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+    required string uuid = 1;
+    required string first_name = 2;
+    required string last_name = 3;
+    required string email = 4;
+    optional string password = 5;
+    required string role = 6;
+    optional int32 organization_id = 7; // TODO: this will be convert to organization
+    optional bool is_active = 10;
+    required google.protobuf.Timestamp created_at = 8;
+    required google.protobuf.Timestamp updated_at = 9;
+}
+
+message UserResponse {
+    User user = 1;
+}

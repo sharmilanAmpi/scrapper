@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package auth;
+
+import "user.proto";
+import "signin_user.proto";
+
+service AuthService {
+    rpc SignInUser (SignInUserRequest) returns (SignInUserResponse) {};
+}
+
