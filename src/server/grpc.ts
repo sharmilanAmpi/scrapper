@@ -1,7 +1,8 @@
 import * as grpc from '@grpc/grpc-js';
 import * as protoLoader from '@grpc/proto-loader';
-import { ProtoGrpcType } from './_proto/auth_services';
 import path from 'path';
+
+import { ProtoGrpcType } from './../../_proto/auth_services';
 
 const options: protoLoader.Options = {
   keepCase: true,
@@ -12,7 +13,8 @@ const options: protoLoader.Options = {
 };
 
 const PORT = 5000;
-const PROTO_FILE = './proto/auth_services.proto';
+const PROTO_FILE = './../../proto/auth_services.proto';
+
 const packageDef = protoLoader.loadSync(
   path.resolve(__dirname, PROTO_FILE),
   options
@@ -38,7 +40,7 @@ server.bindAsync(
     grpc.ServerCredentials.createInsecure(),
     //server start callback 
     (error, port) => {
-      console.log(`listening on port ${port}`);
+      console.log(`gRPC server listening on port ${port}`);
       server.start();
     }
 );

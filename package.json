@@ -4,7 +4,7 @@
   "description": "Application for collecting sensor values from IOT based devices and process it on the real time",
   "main": "index.js",
   "scripts": {
-    "start:server": "npx ts-node-dev --respawn --transpile-only index.ts",
+    "start:server": "npx ts-node-dev --respawn --transpile-only ./src/server/grpc.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
